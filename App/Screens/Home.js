@@ -8,6 +8,7 @@ export default function Home({route, navigation}) {
     <View style={styles.container}>
       <Text>Welcome to Home Screen</Text>
       <Button title="Go To Welcome" onPress={() => {navigation.navigate('Welcome')}} />
+      <Button title="Open Drawer" onPress={() => {navigation.openDrawer()}}/>
       <StatusBar style="auto" />
     </View>
   );
