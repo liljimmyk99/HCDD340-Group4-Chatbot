@@ -12,15 +12,15 @@ export default function Navigator(){
     return(
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
-                <Drawer.Screen name="Home" component={Home}/>
+                <Drawer.Screen name="Home" component={PTSDStack}/>
             </Drawer.Navigator>
         </NavigationContainer>
     )
 }
 const Stack = createStackNavigator();
 function PTSDStack(){
+    console.log("PTSDStack activated")
     return(
-
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={Home}/>
                 <Stack.Screen name="Welcome" component={Welcome}/>
