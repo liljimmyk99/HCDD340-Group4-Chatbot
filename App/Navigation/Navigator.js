@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, useIsDrawerOpen } from '@react-navigation/drawer';
 import Home from '../Screens/Home';
 import Welcome from '../Screens/Welcome';
+import Chats from '../Assets/chatbot/chats'
 
 const Drawer = createDrawerNavigator();
 
@@ -13,6 +14,7 @@ export default function Navigator(){
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
                 <Drawer.Screen name="Home" component={PTSDStack}/>
+                <Drawer.Screen name="Chat-Bot-Test" component={Chats}/>
             </Drawer.Navigator>
         </NavigationContainer>
     )
