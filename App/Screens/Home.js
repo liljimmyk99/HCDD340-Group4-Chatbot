@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, ScrollView } from 'react-native';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 
@@ -18,7 +18,7 @@ export default function Home({route, navigation}) {
    <Button title="Go To Welcome" onPress={() => {navigation.navigate('Welcome')}} />
    <Button title="Open Drawer" onPress={() => {navigation.openDrawer()}}/>
    <StatusBar style="auto" />
-   </ScrollView>
+</ScrollView>
 
     <View style={{flex:0.2, width:'100%',}}>
     <Footer style="auto"/>

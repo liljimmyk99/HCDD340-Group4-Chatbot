@@ -18,7 +18,7 @@ export default function Footer(){
         <Entypo name="plus" size={80} color="#4051b5" />
         </View>
 
-        <View style = { styles.pfile}>
+        <View style = { styles.profile}>
         <Entypo name="user" size={60} color="#4051b5" />
         </View>
 
@@ -42,17 +42,15 @@ const styles = StyleSheet.create({
     },
   
   home:{
-   order:1,
    marginTop:10,
-   
     },
   
     plus: {
-      order:2,
+    
     },
   
-    pfile:{
-     order:3,
+    profile:{
+
      marginTop:10,
     },
   
