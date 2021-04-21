@@ -5,8 +5,8 @@ import Chats from '../Assets/chatbot/chats'
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 
-import Cursor from "./Cursor";
-import Labels from "./Labels";
+import Cursor from "./Components/Cursor";
+import Labels from "./Components/Labels";
 
 const { Value, max, add } = Animated;
 
