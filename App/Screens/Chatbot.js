@@ -9,7 +9,8 @@ export default function ChatBot({route, navigation}) {
     console.log("On ChatBot Screen")
     return(
         <SafeAreaView style={styles.container}>
-            <View style={{}}>
+             <View style={{flex:0.2, width:'100%',}}>
+
                 <Header style="auto"/>
             </View>
 
@@ -17,7 +18,7 @@ export default function ChatBot({route, navigation}) {
                 <Chats/>
             </View>
 
-            <View style={{}}>
+            <View style={{flex:0.2, width:'100%',}}>
                 <Footer style="auto"/>
             </View>
         </SafeAreaView>
