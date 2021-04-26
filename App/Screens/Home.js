@@ -10,18 +10,18 @@ export default function Home({route, navigation}) {
   return (
     <View style={styles.container}> 
     <View style={{flex:0.2, width:'100%',}}>
-         <Header style = "auto"/>
+         <Header openDrawer={() => navigation.openDrawer()}/>
      </View>
 
  <ScrollView >
- <Text>Welcome to Home Screen</Text>
-   <Button title="Go To Welcome" onPress={() => {navigation.navigate('Welcome')}} />
-   <Button title="Open Drawer" onPress={() => {navigation.openDrawer()}}/>
+ <Text style ={styles.hometext}>Post-traumatic stress disorder (PTSD) is a disorder that develops in some people who have experienced a shocking, scary, or dangerous event.
+It is natural to feel afraid during and after a traumatic situation. Fear triggers many split-second changes in the body to help defend against danger or to avoid it. This “fight-or-flight” response is a typical reaction meant to protect a person from harm. Nearly everyone will experience a range of reactions after trauma, yet most people recover from initial symptoms naturally. Those who continue to experience problems may be diagnosed with PTSD. People who have PTSD may feel stressed or frightened, even when they are not in danger.</Text>
+
    <StatusBar style="auto" />
 </ScrollView>
 
     <View style={{flex:0.2, width:'100%',}}>
-    <Footer style="auto"/>
+    <Footer goHome={() => navigation.navigate("Home")}/>
    </View>
 
    </View>
@@ -35,6 +35,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor:'#d3e8f4',
+  },
+
+  hometext:{
+    alignContent: 'center',
+
   },
 
 });
