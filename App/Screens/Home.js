@@ -34,7 +34,6 @@ It is natural to feel afraid during and after a traumatic situation. Fear trigge
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor:'#d3e8f4',

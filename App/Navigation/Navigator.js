@@ -16,7 +16,7 @@ export default function Navigator(){
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
                 <Drawer.Screen name="Home" component={PTSDStack}/>
-                <Drawer.Screen name="Chat-Bot-Test" component={ChatBot}/>
+                <Drawer.Screen name="Chat-Bot" component={ChatBot}/>
 
             </Drawer.Navigator>
         </NavigationContainer>
