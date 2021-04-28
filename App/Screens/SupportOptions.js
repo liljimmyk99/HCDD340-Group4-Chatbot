@@ -22,49 +22,49 @@ export default function SupportOptions({route, navigation}){
         <ScrollView style={{flex: 1}}>
           <Text style={styles.itemText}>Support Exercises</Text>
 
-          <TouchableOpacity onPress={() => webAction("https://www.psychologytoday.com/us/articles/200111/recovering-trauma")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.psychologytoday.com/us/articles/200111/recovering-trauma"})}>
             <View style={styles.item}>
               <Text style={styles.itemText}>Reminded of Trauma</Text>
             </View>
           </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => webAction("https://www.intoactionrecovery.com/avoiding-addiction-triggers-and-relapse/")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.intoactionrecovery.com/avoiding-addiction-triggers-and-relapse/"})}>
           <View style={styles.item}>
             <Text style={styles.itemText}>Avoiding Triggers</Text>
           </View>
           </TouchableOpacity>
            
 
-           <TouchableOpacity onPress={() => webAction("https://thoughtcatalog.com/rania-naim/2017/11/read-this-when-you-feel-disconnected-from-everyone-around-you/")}>
+           <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://thoughtcatalog.com/rania-naim/2017/11/read-this-when-you-feel-disconnected-from-everyone-around-you/"})}>
             <View style={styles.item}>
             <Text style={styles.itemText}>Disconnected from People</Text>
           </View>
            </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => webAction("https://www.learning-mind.com/feel-disconnected-from-reality-stop-dissociation/")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.learning-mind.com/feel-disconnected-from-reality-stop-dissociation/"})}>
           <View style={styles.item}>
             <Text style={styles.itemText}>Disconnected from Reality</Text>
           </View>
           </TouchableOpacity>
 
 
-           <TouchableOpacity onPress={() => webAction("https://www.oprah.com/spirit/how-to-overcome-your-feelings-of-hopelessness/all")}>
+           <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.oprah.com/spirit/how-to-overcome-your-feelings-of-hopelessness/all"})}>
                       <View style={styles.item}>
             <Text style={styles.itemText}>Sad/Hopeless</Text>
           </View>
            </TouchableOpacity >
 
 
-           <TouchableOpacity onPress={() => webAction("https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434")}>
+           <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434"})}>
                       <View style={styles.item}>
             <Text style={styles.itemText}>Angry</Text>
           </View>
            </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => webAction("https://www.aarp.org/health/conditions-treatments/info-2019/have-trouble-sleeping.html")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.aarp.org/health/conditions-treatments/info-2019/have-trouble-sleeping.html"})}>
           <View style={styles.item}>
             <Text style={styles.itemText}>Unable to Sleep</Text>
           </View>
@@ -109,13 +109,15 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     flexDirection: 'row',
     borderTopWidth: 1,
+    borderColor: '#d3e8f4',
   },
     headerContainer:{
     
     justifyContent: 'center',
     alignItems: 'flex-start',
     flexDirection: 'row',
-   borderBottomWidth: 1
+   borderBottomWidth: 1,
+   borderColor: '#d3e8f4',
   }
 
 
