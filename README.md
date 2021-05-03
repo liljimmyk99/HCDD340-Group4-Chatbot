@@ -41,3 +41,6 @@ We implemented a call button that connect to a PSTD hotline for users hoping to 
 ## To View our Code in Snack
 HTTPS: https://github.com/liljimmyk99/HCDD340-Group4-Chatbot.git 
 Branch: master
+
+## To View Chatbot
+https://snack.expo.io/@jbk5603/github.com-liljimmyk99-hcdd340-group4-chatbot@feature-simplechat
