@@ -5,7 +5,11 @@ import { Images, Colors, Metrics } from '../Themes';
 const ProfileView = (profile = {}) => {
     return (
         <View style={styles.card}>
-
+        
+              <View style={styles.pictureView}>
+                <Image style={styles.picture}
+                    source={require('../Assets/Jimmy.png')} accessibilityLabel="Profile Image"/>
+           </View>
 
             <View style={styles.profileRowItem}>
                 <View accessible={true} style={styles.pictureDetails}>
@@ -16,32 +20,32 @@ const ProfileView = (profile = {}) => {
             <View style={styles.profileRowItem}>
 
                 <View accessible={true} accessibilityLabel={profile.name + "'s Date of Birth"} style={styles.textDetails}>
-                    <Text style={{ fontWeight: 'bold' }}>dob</Text>
+                    <Text style={{ fontWeight: 'bold' }}>DOB</Text>
                     <Text>{profile.dob}</Text>
                 </View>
             </View>
            <View style={styles.profileRowItem}>
                 <View accessible={true} accessibilityLabel={profile.name + "'s Age"}style={styles.textDetails}>
-                    <Text style={{ fontWeight: 'bold' }}>age</Text>
+                    <Text style={{ fontWeight: 'bold' }}>AGE</Text>
                     <Text>{profile.age}</Text>
                 </View>
             </View>
            <View style={styles.profileRowItem}>
                 <View accessible={true} accessibilityLabel={profile.name + "'s Street Address"}style={styles.textDetails}>
-                    <Text style={{ fontWeight: 'bold' }}>streetAddress</Text>
+                    <Text style={{ fontWeight: 'bold' }}>StreetAddress</Text>
                     <Text style>{profile.streetAddress}</Text>
                 </View>
             </View>
 
             <View style={styles.profileRowItem}>
                 <View accessible={true} accessibilityLabel={profile.name + "'s City Address"} style={styles.textDetails}>
-                    <Text style={{ fontWeight: 'bold' }}>cityAddress</Text>
+                    <Text style={{ fontWeight: 'bold' }}>CityAddress</Text>
                     <Text>{profile.cityAddress}</Text>
                 </View>
             </View>
              <View style={styles.profileRowItem}>
                 <View accessible={true} accessibilityLabel={profile.name + "'s State Address"} style={styles.textDetails}>
-                    <Text style={{ fontWeight: 'bold' }}>stateAddress</Text>
+                    <Text style={{ fontWeight: 'bold' }}>StateAddress</Text>
                     <Text>{profile.stateAddress}</Text>
                 </View>
 
@@ -84,7 +88,7 @@ const styles = StyleSheet.create({
         marginLeft: Metrics.marginHorizontal,
         marginRight: Metrics.marginHorizontal,
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         alignItems: 'center'
     },
 

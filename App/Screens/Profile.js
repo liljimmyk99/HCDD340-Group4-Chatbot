@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View, ScrollView, SafeAreaView,Image } from 'react-native';
+import { Button, StyleSheet, Text, View, ScrollView, SafeAreaView,Image, Platform } from 'react-native';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import ProfileView from '../Components/profileCard'
@@ -22,19 +22,20 @@ export default function Profile({route, navigation}) {
     console.log("On Profile Screen")
   return (
     <SafeAreaView style={styles.container}> 
-    <View style={{flex:0.5, width:'100%',}}>
+    <View style={{flex:0.9, width:'100%',}}>
          <Header openDrawer={() => navigation.openDrawer()} title={route.name}/>
      </View>
- <View>
+ 
+<ScrollView>
    <View style={styles.scroll}>
-
-  {ProfileView(profile)}
+          {ProfileView(profile)}
 
    <StatusBar style="auto" />
     </View>
-</View >
+    </ScrollView>
 
-    <View style={{flex:0.6, width:'100%',}}>
+
+    <View style={{flex:0.5, width:'100%',    height: Platform.OS === 'ios' ? 44 : 56,}}>
    <Footer goHome={() => navigation.navigate("Home")} goQuestion={() => navigation.navigate("Question")} goProfile={() => navigation.navigate("Profile")}/>
    </View>
 
