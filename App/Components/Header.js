@@ -13,18 +13,21 @@ export default function Header(props){
     return(
         <View style={styles.container}>
         
-          <TouchableOpacity onPress={props.openDrawer}>
-            <View>
+          <TouchableOpacity onPress={props.openDrawer} >
+            <View style={styles.iconsContainer}>
               <Entypo name="menu" size= {50} color="#4051b5" />
             </View>
           </TouchableOpacity>
 
 
-          <View> 
+        <TouchableOpacity onPress={callHome} style={styles.titleContainer}>
+          <View > 
+            <Text style={styles.titleText}>{props.title}</Text>
           </View>
+        </TouchableOpacity>
 
-          <TouchableOpacity onPress={callHome}>
-            <View> 
+          <TouchableOpacity onPress={callHome} style={styles.iconsContainer}>
+            <View style={styles.iconsContainer}> 
               <Entypo name="phone" size= {50} color="#4051b5" />
             </View>
           </TouchableOpacity>
@@ -43,5 +46,28 @@ const styles = StyleSheet.create({
           paddingTop: 3,
           paddingLeft: 5,
           paddingRight: 5,
+
       },
+
+    titleContainer:{
+      flex: 4,
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+
+    titleText: {
+      fontWeight: 'bold',
+      fontSize: 30,
+      color: '#4051b5',
+    },
+    iconsContainer: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+  
+      
+    }
+
     });

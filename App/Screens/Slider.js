@@ -23,7 +23,7 @@ const nextAction = (value, goToURL) => {
 
     if (value >= 9){
           console.log("USER IS IN DISTRESS")
-          //Go To Distress Screen
+          navigation.navigate('Crisis', {activity: url})
     } else if (value >= 0 && value < 9){
       console.log("Going to Activity")
       webAction(goToURL)
@@ -45,7 +45,7 @@ return(
 <SafeAreaView style={styles.container}>
 
     <View style={{flex:0.2, width:'100%',}}>
-         <Header openDrawer={() => navigation.openDrawer()}/>
+         <Header openDrawer={() => navigation.openDrawer()} title={route.name}/>
      </View>
 
 
@@ -57,14 +57,18 @@ return(
         </View>
 
         <View style={styles.slider}>
+        
           <Slider
+          style={{ height: 250}}
             value={slideValue}
             onSlidingComplete={value => setslideValue(value)}
             orientation='vertical'
-            maximumValue={10}
             minimumValue={0}
+            maximumValue={10}
+            minimumTrackTintColor="red"
+            maximumTrackTintColor="white"
             step={1}
-            trackStyle={{ height: 10, backgroundColor: "red" }}
+            trackStyle={{ borderRadius:30,width:30 ,height: 10, backgroundColor: "red" }}
             thumbStyle={{ height: 20, width: 20, backgroundColor: "red" }}
             thumbProps={{
               children: (
@@ -76,6 +80,8 @@ return(
                   containerStyle={{ bottom: 20, right: 20 }}
                   color="#f50"
                 />
+              
+             
               ),
             }}
             
@@ -103,11 +109,12 @@ return(
           
         </TouchableOpacity >
       </View>
+      
 
 </View>
 
     <View style={{flex:0.2, width:'100%',}}>
-    <Footer goHome={() => navigation.navigate("Home")}/>
+    <Footer goHome={() => navigation.navigate("Home")} goQuestion={() => navigation.navigate("Question")}/>
    </View>
 
 </SafeAreaView>
@@ -127,7 +134,7 @@ const styles = StyleSheet.create({
   },
 
   bodyContainer: {
-    flex: 2,
+    flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
@@ -136,10 +143,10 @@ const styles = StyleSheet.create({
   },
 
   sliderContainer:{
-    flex: 2, 
+    flex: 1, 
     alignContent: 'stretch', 
     justifyContent: 'center', 
-    flexDirection: 'row'
+    flexDirection: 'row',
 
   },
 
@@ -148,6 +155,7 @@ const styles = StyleSheet.create({
     alignContent: 'stretch', 
     justifyContent: 'center', 
     flexDirection: 'row',
+    
 
   },
 
@@ -161,28 +169,35 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    flex: 1,
+    flex: 0.4,
     alignContent: 'stretch', 
-    justifyContent: 'center', 
-    borderWidth: 1,
+    justifyContent: 'center',
+
+   
   },
 
   buttonStyle: {
-    borderWidth: 1,
+   
     borderRadius: 10,
+    
     backgroundColor: 'white',
     margin: 10,
     flexDirection: 'row',
     flex: 1,
     alignContent: 'center', 
-    justifyContent: 'center', 
+    justifyContent: 'center',
+     backgroundColor:'#2196f3', 
   },
 
   buttonText: {
     fontWeight: 'bold',
-    color: 'black'
+    color: 'black',
+     fontSize: 20,
+     alignContent:"center",
+     color: 'white',
+
 
   },
+  
 
 });
-

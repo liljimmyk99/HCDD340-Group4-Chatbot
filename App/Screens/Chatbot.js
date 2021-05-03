@@ -8,20 +8,9 @@ import Header from '../Components/Header';
 export default function ChatBot({route, navigation}) {
     console.log("On ChatBot Screen")
     return(
-        <SafeAreaView style={styles.container}>
-             <View style={{flex:0.2, width:'100%',}}>
 
-                <Header style="auto"/>
-            </View>
-
-            <View>
                 <Chats/>
-            </View>
 
-            <View style={{flex:0.2, width:'100%',}}>
-                <Footer style="auto"/>
-            </View>
-        </SafeAreaView>
     );
 }
 

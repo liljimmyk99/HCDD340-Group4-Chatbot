@@ -9,64 +9,58 @@ import { Colors } from '../Themes/Colors';
 
 
 
-export default function SupportOptions({route, navigation}){
+export default function Questions({route, navigation}){
   console.log("On SupportOptions Screen")
 
   const webAction = url => WebBrowser.openBrowserAsync(url);
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.headerContainer}>
-          <Header openDrawer={() => navigation.openDrawer()} title={route.name}/>
+           <Header openDrawer={() => navigation.openDrawer()} title={route.name}/>
         </View>
     
         <ScrollView style={{flex: 1}}>
-          <Text style={styles.itemText}>Support Exercises</Text>
-
-          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.psychologytoday.com/us/articles/200111/recovering-trauma"})}>
-            <View style={styles.item}>
-              <Text style={styles.itemText}>Reminded of Trauma</Text>
-            </View>
-          </TouchableOpacity>
+          <Text style={styles.itemText}>About PTSD</Text>
 
 
-          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.intoactionrecovery.com/avoiding-addiction-triggers-and-relapse/"})}>
+          <TouchableOpacity onPress={() => webAction("https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd/")}>
           <View style={styles.item}>
-            <Text style={styles.itemText}>Avoiding Triggers</Text>
+            <Text style={styles.itemText}>What is PTSD</Text>
           </View>
           </TouchableOpacity>
            
 
-           <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://thoughtcatalog.com/rania-naim/2017/11/read-this-when-you-feel-disconnected-from-everyone-around-you/"})}>
+           <TouchableOpacity onPress={() =>  webAction("https://www.michiganpsychologicalassociation.org/index.php?option=com_dailyplanetblog&amp;view=entry&amp;year=2021&amp;month=01&amp;day=02&amp;id=55:who-gets-ptsd-and-who-doesn-t-")}>
             <View style={styles.item}>
-            <Text style={styles.itemText}>Disconnected from People</Text>
+            <Text style={styles.itemText}>Who can get PTSD</Text>
           </View>
            </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.learning-mind.com/feel-disconnected-from-reality-stop-dissociation/"})}>
+          <TouchableOpacity onPress={() =>  webAction("https://www.mayoclinic.org/diseases-conditions/post-traumatic-stress-disorder/symptoms-causes/syc-20355967")}>
           <View style={styles.item}>
-            <Text style={styles.itemText}>Disconnected from Reality</Text>
+            <Text style={styles.itemText}>Symptoms of PTSD</Text>
           </View>
           </TouchableOpacity>
 
 
-           <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.oprah.com/spirit/how-to-overcome-your-feelings-of-hopelessness/all"})}>
+           <TouchableOpacity onPress={() => webAction("http://www.ptsdalliance.org/help/")}>
                       <View style={styles.item}>
-            <Text style={styles.itemText}>Sad/Hopeless</Text>
+            <Text style={styles.itemText}>Find In-Perosn/Over the Phone Support</Text>
           </View>
            </TouchableOpacity >
 
 
-           <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434"})}>
+           <TouchableOpacity onPress={() => navigation.navigate('SupportOptions')}>
                       <View style={styles.item}>
-            <Text style={styles.itemText}>Angry</Text>
+            <Text style={styles.itemText}>Suppport Exercises</Text>
           </View>
            </TouchableOpacity>
 
 
-          <TouchableOpacity onPress={() => navigation.navigate('Slider', {url: "https://www.aarp.org/health/conditions-treatments/info-2019/have-trouble-sleeping.html"})}>
+          <TouchableOpacity onPress={() => navigation.navigate('Crisis', {activity: "https://www.ptsd.va.gov"})}>
           <View style={styles.item}>
-            <Text style={styles.itemText}>Unable to Sleep</Text>
+            <Text style={styles.itemText}>I'm in Crisis </Text>
           </View>
           </TouchableOpacity>
           

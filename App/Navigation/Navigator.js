@@ -5,8 +5,11 @@ import { createDrawerNavigator, useIsDrawerOpen } from '@react-navigation/drawer
 import Home from '../Screens/Home';
 import Welcome from '../Screens/Welcome';
 import ChatBot from '../Screens/Chatbot';
-import SupportOptions from '../Screens/SupportOptions'
-import Slider from '../Screens/Slider'
+import Crisis from '../Screens/Crisis';
+import SupportOptions from '../Screens/SupportOptions';
+import Slider from '../Screens/Slider';
+import Question from '../Screens/Question';
+import Profile from '../Screens/Profile';
 
 const Drawer = createDrawerNavigator();
 
@@ -16,7 +19,8 @@ export default function Navigator(){
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
                 <Drawer.Screen name="Home" component={PTSDStack}/>
-                <Drawer.Screen name="Chat-Bot" component={ChatBot}/>
+                <Drawer.Screen name="Chat-Bot-Test" component={ChatBot}/>
+                
 
             </Drawer.Navigator>
         </NavigationContainer>
@@ -32,6 +36,9 @@ function PTSDStack(){
                 <Stack.Screen name="Welcome" component={Welcome} />
                 <Stack.Screen name="Slider" component={Slider} />
                 <Stack.Screen name="SupportOptions" component={SupportOptions} />
+                <Stack.Screen name="Crisis" component={Crisis}/>
+                <Stack.Screen name="Question" component={Question}/>
+                <Stack.Screen name="Profile" component={Profile}/>
                
             </Stack.Navigator>
 

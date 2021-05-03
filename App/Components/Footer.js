@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Image, Picker } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Entypo } from '@expo/vector-icons'; 
+import { Entypo, FontAwesome } from '@expo/vector-icons'; 
 
 
 
@@ -17,13 +17,13 @@ export default function Footer(props){
           </View> 
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => console.log("Add Clicked")}>
+        <TouchableOpacity onPress={props.goQuestion}>
           <View>
-          <Entypo name="plus" size={80} color="#4051b5" />
+          <FontAwesome name="question" size={60} color="#4051b5" />
           </View>
         </TouchableOpacity>
         
-        <TouchableOpacity onPress={() => console.log("Profile Clicked")}>
+        <TouchableOpacity onPress={props.goProfile}>
           <View>
           <Entypo name="user" size={60} color="#4051b5" />
           </View>
