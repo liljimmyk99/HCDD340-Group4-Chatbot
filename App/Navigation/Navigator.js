@@ -19,9 +19,8 @@ export default function Navigator(){
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
                 <Drawer.Screen name="Home" component={PTSDStack}/>
-                <Drawer.Screen name="Chat-Bot-Test" component={ChatBot}/>
+                <Drawer.Screen name="SimpleChat" component={ChatBot}/>
                 
-
             </Drawer.Navigator>
         </NavigationContainer>
     )
@@ -31,7 +30,6 @@ function PTSDStack(){
     console.log("PTSDStack activated")
     return(
             <Stack.Navigator screenOptions={{headerShown: false}}>
-
                 <Stack.Screen name="Home" component={Home}/>
                 <Stack.Screen name="Welcome" component={Welcome} />
                 <Stack.Screen name="Slider" component={Slider} />
@@ -39,7 +37,6 @@ function PTSDStack(){
                 <Stack.Screen name="Crisis" component={Crisis}/>
                 <Stack.Screen name="Question" component={Question}/>
                 <Stack.Screen name="Profile" component={Profile}/>
-               
             </Stack.Navigator>
 
     )

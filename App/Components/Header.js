@@ -20,7 +20,7 @@ export default function Header(props){
           </TouchableOpacity>
 
 
-        <TouchableOpacity onPress={callHome} style={styles.titleContainer}>
+        <TouchableOpacity style={styles.titleContainer}>
           <View > 
             <Text style={styles.titleText}>{props.title}</Text>
           </View>

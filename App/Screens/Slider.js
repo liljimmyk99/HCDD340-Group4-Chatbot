@@ -44,7 +44,7 @@ return(
 
 <SafeAreaView style={styles.container}>
 
-    <View style={{flex:0.2, width:'100%',}}>
+    <View style={{flex:0.1, width:'100%',}}>
          <Header openDrawer={() => navigation.openDrawer()} title={route.name}/>
      </View>
 
@@ -113,7 +113,7 @@ return(
 
 </View>
 
-    <View style={{flex:0.2, width:'100%',}}>
+    <View style={{flex:0.1, width:'100%',}}>
     <Footer goHome={() => navigation.navigate("Home")} goQuestion={() => navigation.navigate("Question")}/>
    </View>
 
